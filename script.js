@@ -3,6 +3,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const modal = document.createElement("div");
     modal.classList.add("modal");
 
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.navbar ul');
+    
+    // Toggle the visibility of the menu
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+    
+    // Close the menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('show');
+        });
+    });
+    
+    // Optional: Close the menu if clicked outside of it
+    window.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove('show');
+        }
+    });
+    
+
     // Modal structure
     modal.innerHTML = `
         <div class="modal-content">
@@ -13,52 +36,37 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     document.body.appendChild(modal);
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const heroTexts = document.querySelectorAll('.animate-text');
-    
-        heroTexts.forEach((text, index) => {
-            text.style.animationDelay = `${index * 0.5}s`; // Delays each text by 0.5s
-        });
-    });
-    
-
     const modalTitle = document.getElementById("modal-title");
     const modalDescription = document.getElementById("modal-description");
     const closeModalButton = modal.querySelector(".close");
-    const menuToggle = document.getElementById('mobile-menu');
-const navLinks = document.getElementById('nav-links');
 
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-});
-
-
-    // Modal functionality
+    // Open modal when a project link is clicked
     projectLinks.forEach(link => {
         link.addEventListener("click", function (e) {
             e.preventDefault();
 
-            const projectCard = e.target.closest(".project-card");
-            const projectTitle = projectCard.querySelector("h3").textContent;
-            const projectDescription = projectCard.querySelector("p").textContent;
+            const projectTitle = e.target.getAttribute("data-title");
+            const projectDescription = e.target.getAttribute("data-description");
 
             // Populate modal content
             modalTitle.textContent = projectTitle;
             modalDescription.textContent = projectDescription;
 
-            // Center modal on the screen
-            modal.style.display = "flex"; // Use flex to center modal vertically and horizontally
+            // Show modal
+            modal.style.display = "flex";
         });
     });
 
-    // Close modal functionality
+    // Close modal
     closeModalButton.addEventListener("click", function () {
         modal.style.display = "none";
     });
 
+    // Close modal when clicking outside of the content
     window.addEventListener("click", function (e) {
         if (e.target === modal) {
             modal.style.display = "none";
         }
     });
 });
+

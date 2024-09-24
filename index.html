@@ -11,192 +11,298 @@
 <body>
     <header class="main-header">
         <nav class="navbar">
-            <div class="menu-toggle" id="mobile-menu">
+            <div id="mobile-menu" class="menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
+            
             <ul class="nav-links" id="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#about">A propos</a></li>
                 <li><a href="#competences">Compétences</a></li>
+                <li><a href="#experiences">Expériences</a></li>
                 <li><a href="#mon-parcours">Parcours</a></li>
                 <li><a href="#projets">Projets</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#benevolat">Bénévolat</a></li>
+                <li><a href="#hobbies">Loisirs</a></li>
+            
             </ul>
         </nav>
     </header>
 
     <section id="accueil" class="hero">
         <div class="hero-content">
-            <h1 class="animate-text">Abdelkarim REZGUI</h1>
-            <p class="animate-text">Développeur full-stack Java/Spring Boot & Angular</p>
+            <h1 class="animate-text section-title">Abdelkarim REZGUI</h1>
+            <p class="animate-text">Développeur full-stack</p>
+            <p class="animate-text">Spécialité Java : Spring Boot / Angular</p>
         </div>
     </section>
+    
     
 
     <section id="about" class="about-section">
-        <h2>À propos</h2>
+        <h2 class="section-title">À propos</h2>
         <p>
-            Développeur full-stack, je me spécialise en Spring Boot et Angular, avec un intérêt pour d'autres technologies comme PHP et Python. Passionné par la résolution de problèmes techniques, je valorise la créativité et le travail d'équipe, des qualités que j'ai développées à travers mes projets et mes hobbies comme le théâtre et les jeux. Bénévole dans l'accompagnement administratif, j'aime allier technique et humain dans mon travail. Mon ambition est d’évoluer vers des postes à responsabilité, notamment en gestion de projet.
+            Développeur full-stack spécialisé en Spring Boot et Angular, je suis passionné par l'art de créer des solutions fonctionnelles et performantes. J'aime transformer des défis complexes en opportunités de croissance, où chaque problème devient un terrain d'exploration pour l'innovation. La collaboration est au cœur de mon approche, car c'est ensemble que les idées prennent vie. 
         </p>
     </section>
 
+   
+    
     <section id="competences" class="competences-section">
-        <h2>Mes Compétences</h2>
-        <div class="competences-container">
-            <!-- Left column -->
-            <div class="competences-column">
-                <div class="competences-category">
-                    <h3><i class="fas fa-code"></i> Langages & Frameworks</h3>
-                    <ul>
-                        <li><strong>Front-End:  </strong>HTML,CSS,Javascript</li>
-                        <li><strong>Back-end:  </strong>Java,PHP,Python</li>
-                        <li><strong>Frameworks:  </strong>Spring Boot, Symfony</li>
-                        <li><strong>Mobile:  </strong>React Native</li>
-                    </ul>
-                </div>
-
-                <div class="competences-category">
-                    <h3><i class="fas fa-database"></i> Bases de données & Modélisation</h3>
-                    <ul>
-                        <li>MySQL, Merise, UML</li>
-                    </ul>
-                </div>
+        <h2 class="section-title">Mes Compétences</h2>
+        <div class="card-container">
     
-               
-    
-                <div class="competences-category">
-                    <h3><i class="fas fa-pencil-alt"></i> Design & Prototypage</h3>
-                    <ul>
-                        <li>Figma (maquettage, prototypage)</li>
-                    </ul>
-                </div>
+            <!-- Development & Frameworks -->
+            <div class="card">
+                <h3><i class="fas fa-code"></i> Langages & Frameworks</h3>
+                <ul>
+                    <li><strong>Front-End: </strong>HTML, CSS, JavaScript</li>
+                    <li><strong>Back-End: </strong>Java, PHP, Python</li>
+                    <li><strong>Frameworks: </strong>Spring Boot, Symfony</li>
+                    <li><strong>Mobile: </strong>React Native</li>
+                </ul>
             </div>
     
-            <!-- Right column -->
-            <div class="competences-column">
+            <!-- Bases de Données & Modélisation -->
+            <div class="card">
+                <h3><i class="fas fa-database"></i> Bases de Données & Modélisation</h3>
+                <ul>
+                    <li><strong>Modélisation:</strong>Merise,UML</li>
+                    <li><strong>Langage de Requêtes:</strong>SQL(MySQL)</li>
+                </ul>
+            </div>
+    
+            <!-- Outils, IDE, & CI/CD -->
+            <div class="card">
+                <h3><i class="fas fa-tools"></i> Outils, IDE, & CI/CD</h3>
+                <ul>
+                    <li><strong>IDE: </strong>VSCode, IntelliJ IDEA</li>
+                    <li><strong>Versioning & CI/CD: </strong>Git</li>
+                    <li><strong>Conteneurisation :</strong>Docker</li>
+                    <li><strong>API & Tests: </strong>Postman</li>
+                </ul>
+            </div>
+    
+            <!-- Design & CMS -->
+            <div class="card">
+                <h3><i class="fas fa-pencil-alt"></i> Design, CMS & Prototypage</h3>
+                <ul>
+                    <li><strong>Design: </strong>Figma (maquettage, prototypage)</li>
+                    <li><strong>CMS: </strong>WordPress, Prestashop</li>
+                </ul>
+            </div>
+    
+            <!-- SEO & Performance -->
+            <div class="card">
+                <h3><i class="fas fa-search"></i> SEO & Performance</h3>
+                <ul>
+                    <li><strong>Optimisation SEO :</strong>Amélioration de la visibilité des sites sur les moteurs de recherche (balises, mots-clés, métadonnées)</li>
+                    <li><strong>Optimisation des Performances : </strong>Réduction du temps de chargement et amélioration de la fluidité des sites (optimisation du code, gestion des ressources)</li>
+                </ul>
+            </div>
+    
+            <!-- Réseaux & Systèmes -->
+            <div class="card">
+                <h3><i class="fas fa-network-wired"></i> Réseaux & Systèmes</h3>
+                <ul>
+                   <li><strong>Réseaux:</strong>Notions en topologies réseau, protocoles, et configuration réseau basique (Packet Tracer)</li>
+                   <li><strong>Systèmes:</strong>Linux (Alpine), administration de systèmes</li>
+                   <li><strong>Objets connectés:</strong>Arduino pour la programmation et le prototypage matériel</li>
+                </ul>
+            </div>
+    
+            <!-- Sécurité & Conformité -->
+            <div class="card">
+                <h3><i class="fas fa-shield-alt"></i> Sécurité & Conformité</h3>
+                <ul>
+                    <li><strong>Sécurité:</strong>Certification ANSSI</li>
+                    <li><strong>Conformité:</strong>Certification RGPD</li>
+                </ul>
+            </div>
+    
+            <!-- Méthodologies de Travail -->
+            <div class="card">
+                <h3><i class="fas fa-project-diagram"></i> Méthodologies de Travail</h3>
+                <ul>
+                    <li><strong>Agile :</strong> Cadre méthodologique</li>
+                    <li><strong>Scrum :</strong> Sous-ensemble d'Agile</li>
+                </ul>
+            </div>
+            
+        </div>
+    </section>
 
-                <div class="competences-category">
-                    <h3><i class="fas fa-tools"></i> Outils de développement</h3>
-                    <ul>
-                        <li><strong>IDE :</strong> VSCode, IntelliJ IDEA</li>
-                        <li><strong>Versioning & CI/CD :</strong> Git, Docker</li>
-                        <li><strong>API & Tests :</strong> Postman</li>
-                    </ul>
-                </div>
+    <section id="experiences" class="experiences-section">
+        <h2 class="section-title">Mes Expériences</h2>
+        <div class="experiences-container">
+            <!-- Mobile App Development Experience -->
+            <div class="experience-card card">
+                <i class="fas fa-mobile-alt experience-icon"></i>
+                <h3>Développeur d'Applications Mobiles</h3>
+                <p><strong>Stage</strong> | Juin 2024 - Août 2024 | Forbach, Grand Est</p>
+                <p>Développement d'une application mobile pour la gestion des rendez-vous. Fonctionnalités : inscription, connexion, affichage, création de rendez-vous manuels, notifications.</p>
+                <p><strong>Technologies :</strong> React Native, SQL</p>
+            </div>
     
-                <div class="competences-category">
-                    <h3><i class="fas fa-network-wired"></i> Réseaux & Systèmes</h3>
-                    <ul>
-                        <li>Notions en réseaux, Linux (Alpine), Packet Tracer, Arduino</li>
-                    </ul>
-                </div>
+            <!-- Web Development & WordPress Experience -->
+            <div class="experience-card card">
+                <i class="fas fa-globe experience-icon"></i>
+                <h3>Développeur Wordpress</h3>
+                <p><strong>Stage</strong> | Novembre 2023 | Forbach, Grand Est</p>
+                <p>Création d’un site WordPress pour la gestion des rendez-vous et un blog, avec personnalisation de thèmes et optimisation SEO.</p>
+                <p><strong>Technologies :</strong> WordPress, PHP</p>
+            </div>
     
-                <div class="competences-category">
-                    <h3><i class="fas fa-shield-alt"></i> Sécurité & Conformité</h3>
-                    <ul>
-                        <li>Certifications ANSSI, RGPD</li>
-                    </ul>
-                </div>
-    
-                <div class="competences-category">
-                    <h3><i class="fas fa-project-diagram"></i> Méthodologies</h3>
-                    <ul>
-                        <li>Agile, Scrum</li>
-                    </ul>
-                </div>
+            <!-- SEO & Web Optimization Experience -->
+            <div class="experience-card card">
+                <i class="fas fa-search experience-icon"></i>
+                <h3>Développeur Web</h3>
+                <p><strong>Stage</strong> | Septembre 2020 - Novembre 2020 | Buhl-Lorraine, À distance</p>
+                <p>Optimisation SEO du site PrestaShop pour une association Vegan et personnalisation de modules PHP. Contenu optimisé pour le SEO.</p>
+                <p><strong>Technologies :</strong> PrestaShop, PHP, SEO</p>
             </div>
         </div>
     </section>
     
 
+
+    
+    
     <section id="mon-parcours" class="parcours-section">
         <h2 class="section-title">Mon Parcours</h2>
-    
-        <div class="parcours-container">
-            <!-- Concepteur Développeur d'Applications -->
-            <div class="parcours-column">
-                <div class="parcours-card">
-                    <h3 class="parcours-header"><i class="fas fa-graduation-cap"></i> Concepteur Développeur d’Applications (Bac +3)</h3>
-                    <div class="parcours-content">
-                        <p>Formation spécialisée dans la conception, le développement et la maintenance d’applications. Les étudiants acquièrent des compétences en analyse, gestion de projets et sécurité des données.</p>
-                        <div class="competences">
-                            <h4>Compétences :</h4>
-                            <ul class="competence-list">
-                                <li><i class="fas fa-check-circle"></i> Analyse des besoins</li>
-                                <li><i class="fas fa-check-circle"></i> Gestion de projets</li>
-                                <li><i class="fas fa-check-circle"></i> Développement d’applications</li>
-                                <li><i class="fas fa-check-circle"></i> Sécurité des données</li>
-                                <li><i class="fas fa-check-circle"></i> Travail en équipe</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        <div class="card-container">
+            <!-- Concepteur Développeur d’Applications -->
+            <div class="card">
+                <h3 class="parcours-header">
+                    <i class="fas fa-graduation-cap"></i> Concepteur Développeur d’Applications
+                </h3>
+                <p>
+                    <strong>2024 - Titre Professionnel de Niveau 6 (Bac+3)</strong> - Formation axée sur la gestion de projets complexes, la conception de logiciels sécurisés, et l'architecture système. 
+                    Elle inclut des compétences avancées en modélisation et en méthodologies Agiles, préparant aux rôles de développeur full-stack, architecte de système ou chef de projet technique.
+                </p>
             </div>
-    
+        
             <!-- Développeur Web et Web Mobile -->
-            <div class="parcours-column">
-                <div class="parcours-card">
-                    <h3 class="parcours-header"><i class="fas fa-graduation-cap"></i> Développeur Web et Web Mobile (Bac +2)</h3>
-                    <div class="parcours-content">
-                        <p>Cette formation permet de développer des compétences clés dans la création d’applications web et mobiles, avec un focus sur la conception d’interfaces utilisateur et la gestion de contenu.</p>
-                        <div class="competences">
-                            <h4>Compétences :</h4>
-                            <ul class="competence-list">
-                                <li><i class="fas fa-check-circle"></i> Conception d'interfaces</li>
-                                <li><i class="fas fa-check-circle"></i> Développement web et mobile</li>
-                                <li><i class="fas fa-check-circle"></i> Gestion de contenu</li>
-                                <li><i class="fas fa-check-circle"></i> Optimisation de l’expérience utilisateur</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div class="card">
+                <h3 class="parcours-header">
+                    <i class="fas fa-graduation-cap"></i> Développeur Web et Web Mobile
+                </h3>
+                <p>
+                    <strong>2020 - Titre Professionnel de Niveau 5 (Bac+2)</strong> - Formation spécialisée dans le développement web et mobile. Elle couvre l'intégration front-end, le développement back-end, et l'optimisation de l'expérience utilisateur. 
+                    Les diplômés acquièrent des compétences pour devenir développeur web, mobile ou intégrateur.
+                </p>
             </div>
         </div>
-    </section>
-    
+        
     
     
     <section id="projets" class="projects-section">
         <h2 class="section-title">Mes Projets</h2>
-    
-        <div class="projects-container">
-            <!-- Project 1 -->
-            <div class="project-card">
-                <div class="project-image">
-                   <!--<img src="path/to/garage_project_image.jpg" alt="Projet Garage Solidaire">--> 
-                </div>
-                <div class="project-content">
-                    <h3>Application de Garage Solidaire</h3>
-                    <p>Développement en binôme d'une application pour la gestion des services d’un garage, incluant la gestion des réservations, facturations et suivi des véhicules.</p>
-                    <a href="#" class="project-link">Voir plus</a>
-                </div>
+        <div class="card-container">
+            <div class="card">
+                <h3>Application de Garage Solidaire</h3>
+                <p>Développement d'une application pour la gestion des services d’un garage...</p>
+                <a href="#" class="project-link btn" data-title="Application de Garage Solidaire" data-description="Développement d'une application pour la gestion des services d’un garage, incluant la gestion des réservations, facturations et suivi des véhicules.">Voir plus</a>
             </div>
+            <div class="card">
+                <h3>Application Mobile d'Écrivain Conseil</h3>
+                <p>Développement d'une application mobile en React Native pour la gestion des rendez-vous...</p>
+                <a href="#" class="project-link btn" data-title="Application Mobile d'Écrivain Conseil" data-description="Développement d'une application mobile en React Native pour la gestion des rendez-vous et notifications.">Voir plus</a>
+            </div>
+            <!-- Add more cards for other projects -->
+        </div>
+    </section>
     
     
-            <!-- Project 4 -->
-            <div class="project-card">
-                <div class="project-image"><!--<img src="path/to/mobile_project_image.jpg" alt="Application Mobile">-->
+    
+    
+    
+    <section id="benevolat" class="benevolat-section">
+        <h2 class="section-title">Mon Engagement Bénévole</h2>
+        <div class="benevolat-card">
+            <div class="card benevolat-card">
+                <div class="card-content">
+                    <h3><i class="fas fa-hands-helping"></i> Accompagnement Administratif</h3>
+                    <p>Je facilite les démarches administratives de personnes en difficulté, qu’il s’agisse de dossiers complexes ou de démarches en ligne. Mon accompagnement se fait avec patience et empathie, apportant des solutions concrètes tout en créant une connexion humaine enrichissante.</p>
                     
-                </div>
-                <div class="project-content">
-                    <h3>Application Mobile d'Écrivain Conseil</h3>
-                    <p>Développement d'une application mobile en React Native pour la gestion des rendez-vous et notifications.</p>
-                    <a href="#" class="project-link">Voir plus</a>
                 </div>
             </div>
         </div>
     </section>
+    
+    
+
+    <section id="hobbies" class="hobbies-section">
+        <h2 class="section-title">Mes Hobbies</h2>
+        <div class="hobbies-container">
+            <!-- Creativity Section: Theatre & Writing -->
+            <div class="hobby-card">
+                <i class="fas fa-theater-masks hobby-icon"></i>
+                <h3>Théâtre</h3>
+                <p>J'explore ma créativité à travers le théâtre, en tant que spectateur et acteur, développant des compétences d'improvisation et d'expression orale.</p>
+            </div>
+            <div class="hobby-card">
+                <i class="fas fa-pencil-alt hobby-icon"></i>
+                <h3>Écriture Créative & RP</h3>
+                <p>L'écriture créative et le RP nourrissent ma passion pour la création d'univers et de récits collaboratifs.</p>
+            </div>
+    
+            <!-- Games & Competitive Achievements -->
+            <div class="hobby-card">
+                <i class="fas fa-dice hobby-icon"></i>
+                <h3>Jeux Vidéo & Jeux de Société</h3>
+                <p>Ma passion pour les jeux s'étend des jeux de société aux TCG, en passant par les jeux vidéos,avec une solide expérience dans le monde compétitif :</p>
+                <ul>
+                    <li>Gestion d'équipes de joueurs et stratégie collective</li>
+                    <li>Analyse approfondie de decks et optimisation des performances</li>
+                    <li>Participation active à divers tournois locaux et en ligne</li>
+                </ul>
+            </div>
+            
+    
+            <!-- Reading & Visual Media Section -->
+            <div class="hobby-card">
+                <i class="fas fa-book-open hobby-icon"></i>
+                <h3>Lecture & Univers Visuels</h3>
+                <p>Je m'évade dans des univers variés à travers la lecture, incluant mangas, webtoons, et animes ou autres médias visuels (séries,films), qui enrichissent ma créativité et mon imagination.</p>
+            </div>
+    
+            <!-- Technology Enthusiast -->
+            <div class="hobby-card">
+                <i class="fas fa-cogs hobby-icon"></i>
+                <h3>Technologies Avancées: IA & ML</h3>
+                <p>Je suis particulièrement intéressé par l'IA et le Machine Learning pour leur potentiel à transformer divers secteurs, comme la santé, la finance, et l'éducation.</p>
+            </div>
+    
+            <!-- History Enthusiast -->
+            <div class="hobby-card">
+                <i class="fas fa-landmark hobby-icon"></i>
+                <h3>Histoire</h3>
+                <p>Je suis fasciné par l’histoire des civilisations en particulier d'Asie,du Moyen Orient & d'Afrique du Nord découvrant leur culture et leur influence sur le monde.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+    
+    
+  
     
     
     
 
     <footer class="main-footer">
-        <p>© 2024 Mon Portfolio</p>
+        <div class="footer-content">
+            <p>© 2024 CvFolio <br/> Created by TekalchemyX</p>
+            <p class="footer-tagline">Faire de vos idées, une réalité!</p>
+        </div>
         <div class="social-icons">
-            <a href="https://www.linkedin.com" target="_blank" class="social-link">
+            <a href="https://www.linkedin.com/in/abdelkarimrezgui" target="_blank" class="social-link">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <a href="https://github.com" target="_blank" class="social-link">
+            <a href="https://github.com/Arzgui" target="_blank" class="social-link">
                 <i class="fab fa-github"></i>
             </a>
             <a href="https://twitter.com" target="_blank" class="social-link">
@@ -210,6 +316,7 @@
             </a>
         </div>
     </footer>
+    
    
     
     
