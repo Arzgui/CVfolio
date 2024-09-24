@@ -50,9 +50,19 @@ a {
     font-size: 2rem;
     color: #d4af37;
     cursor: pointer;
+    z-index: 100; /* Ensure the burger menu is on top */
+    position: relative; /* Keep it above other content */
 }
 
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        z-index: 100; /* Ensure the burger menu is on top */
+    }
+
     .navbar ul {
         flex-direction: column;
         position: absolute;
@@ -61,25 +71,27 @@ a {
         width: 100%;
         background-color: #333;
         display: none;
-    }
-
-    .navbar ul li {
-        text-align: center;
-        margin: 1rem 0;
-    }
-
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 1rem;
-        right: 1.5rem;
+        z-index: 99; /* Keep the nav links below the burger menu */
     }
 
     .navbar ul.show {
         display: flex;
     }
-}
 
+    .hero {
+        background-position: center center;
+        background-size: cover;
+        height: 60vh; /* Reduce height for mobile */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Adjust title size for mobile */
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
 /* Hero Section */
 .hero {
     position: relative;
