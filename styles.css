@@ -50,19 +50,9 @@ a {
     font-size: 2rem;
     color: #d4af37;
     cursor: pointer;
-    z-index: 100; /* Ensure the burger menu is on top */
-    position: relative; /* Keep it above other content */
 }
 
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 1rem;
-        right: 1.5rem;
-        z-index: 100; /* Ensure the burger menu is on top */
-    }
-
     .navbar ul {
         flex-direction: column;
         position: absolute;
@@ -71,31 +61,31 @@ a {
         width: 100%;
         background-color: #333;
         display: none;
-        z-index: 99; /* Keep the nav links below the burger menu */
+    }
+
+    .navbar ul li {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
     }
 
     .navbar ul.show {
         display: flex;
     }
-
-    .hero {
-        background-position: center center;
-        background-size: cover;
-        height: 60vh; /* Reduce height for mobile */
-    }
-
-    .hero h1 {
-        font-size: 2.5rem; /* Adjust title size for mobile */
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
 }
+
+/* Hero Section */
+/* General Styling */
 /* Hero Section */
 .hero {
     position: relative;
-    background: url('your-image-url.jpg') no-repeat center center/cover;
+    background: url('https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -106,23 +96,51 @@ a {
     animation: zoomIn 10s infinite alternate ease-in-out;
 }
 
-@media (max-width: 768px) {
-    .hero {
-        background-position: center center;
-        background-size: cover;
-        height: 60vh; /* Reduce height for mobile */
-    }
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+    z-index: 1;
+}
 
-    .hero h1 {
-        font-size: 2.5rem; /* Adjust title size for mobile */
-    }
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 1.5s ease-in-out forwards;
+}
 
-    .hero p {
-        font-size: 1rem;
+h1, p {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+h1 {
+    font-size: 4rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    animation: glitch 3s infinite;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    animation: fadeInUp 2s ease-in-out forwards;
+}
+
+/* Keyframe Animations */
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
     }
 }
 
-/* Fade In for content */
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -133,11 +151,6 @@ a {
         transform: translateY(0);
     }
 }
-
-
-
-
-
 
 @keyframes glitch {
     0% {
