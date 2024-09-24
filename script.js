@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Modal Creation
     const projectLinks = document.querySelectorAll(".project-link");
     const modal = document.createElement("div");
     modal.classList.add("modal");
-
-    // Modal structure
     modal.innerHTML = `
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -13,50 +12,45 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     document.body.appendChild(modal);
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const heroTexts = document.querySelectorAll('.animate-text');
-    
-        heroTexts.forEach((text, index) => {
-            text.style.animationDelay = `${index * 0.5}s`; // Delays each text by 0.5s
-        });
-    });
-    
-
     const modalTitle = document.getElementById("modal-title");
     const modalDescription = document.getElementById("modal-description");
     const closeModalButton = modal.querySelector(".close");
+    
+    // Mobile Menu Toggle
     const menuToggle = document.getElementById('mobile-menu');
-const navLinks = document.getElementById('nav-links');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
 
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-});
+    // Delay Hero Text Animation
+    const heroTexts = document.querySelectorAll('.animate-text');
+    heroTexts.forEach((text, index) => {
+        text.style.animationDelay = `${index * 0.5}s`; // Staggered animation delay
+    });
 
-
-    // Modal functionality
+    // Modal Functionality
     projectLinks.forEach(link => {
         link.addEventListener("click", function (e) {
             e.preventDefault();
-
             const projectCard = e.target.closest(".project-card");
             const projectTitle = projectCard.querySelector("h3").textContent;
             const projectDescription = projectCard.querySelector("p").textContent;
 
-            // Populate modal content
+            // Populate modal content and display
             modalTitle.textContent = projectTitle;
             modalDescription.textContent = projectDescription;
-
-            // Center modal on the screen
-            modal.style.display = "flex"; // Use flex to center modal vertically and horizontally
+            modal.style.display = "flex";
         });
     });
 
-    // Close modal functionality
-    closeModalButton.addEventListener("click", function () {
+    // Close Modal on Click
+    closeModalButton.addEventListener("click", () => {
         modal.style.display = "none";
     });
 
-    window.addEventListener("click", function (e) {
+    // Close Modal on Outside Click
+    window.addEventListener("click", (e) => {
         if (e.target === modal) {
             modal.style.display = "none";
         }
