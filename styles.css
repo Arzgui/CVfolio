@@ -34,6 +34,7 @@ a:hover {
     display: flex;
     justify-content: center;
     list-style-type: none;
+    z-index: 1000;
 }
 
 .navbar ul li {
@@ -334,6 +335,8 @@ section {
 li {
     list-style-type: none;
 }
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
