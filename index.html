@@ -10,24 +10,25 @@
 </head>
 <body>
     <header class="main-header">
+        <div id="mobile-menu" class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        
         <nav class="navbar">
-            <div id="mobile-menu" class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            
             <ul class="nav-links" id="nav-links">
-             
-                <li><a href="#about">A propos</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#experiences">Expériences</a></li>
-                <li><a href="#mon-parcours">Parcours</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#benevolat">Bénévolat</a></li>
-                <li><a href="#hobbies">Loisirs</a></li>
-                <li><a href="#cv-download">Mon CV</a></li>
-            
+                <li><a href="#accueil"><i class="fas fa-home"></i></a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> </a></li>
+                <li><a href="#competences"><i class="fas fa-code"></i> </a></li>
+                <li><a href="#experiences"><i class="fas fa-briefcase"></i> </a></li>
+                <li><a href="#mon-parcours"><i class="fas fa-graduation-cap"></i> </a></li>
+                <li><a href="#projets"><i class="fas fa-project-diagram"></i> </a></li>
+                <li><a href="#benevolat"><i class="fas fa-hand-holding-heart"></i> </a></li>
+                <li><a href="#hobbies"><i class="fas fa-gamepad"></i> </a></li>
+                <li><a href="#cv-download"><i class="fas fa-file-alt"></i> </a></li>
             </ul>
         </nav>
+        
+        
     </header>
 
     <section id="accueil" class="hero">
@@ -39,9 +40,13 @@
                 DÉVELOPPEUR JAVA FULL STACK
             </h2>
             <h2>
-                <img src="https://www.svgrepo.com/show/353396/angular-icon.svg" alt="Angular Logo" style="height:20px;"> Angular |
-                Spring Boot <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Spring_Boot.svg/768px-Spring_Boot.svg.png" alt="Spring Boot Logo" style="height:20px;"> 
-              </h2>
+                <h2>
+                    <img src="https://www.svgrepo.com/show/353396/angular-icon.svg" alt="Angular Logo" class="tech-logo"> 
+                    Angular | 
+                    Spring Boot 
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Spring_Boot.svg/768px-Spring_Boot.svg.png" alt="Spring Boot Logo" class="tech-logo">
+                </h2>
+                
               
         </div>
     </section>
@@ -57,92 +62,87 @@ Développeur full-stack spécialisé en Spring Boot et Angular, je suis passionn
 
  
     
-    
     <section id="competences" class="competences-section">
-        <h2 class="section-title">Mes Compétences</h2>
+        <h2 class="section-title ">Mes Compétences</h2>
         <div class="competences-container">
             <!-- Left Column -->
             <div class="competences-column">
                 <div class="competences-category">
                     <h3><i class="fas fa-code"></i> Langages & Frameworks</h3>
                     <ul>
-                        <li><strong>Front-End:  </strong>HTML, CSS, JavaScript</li>
-                        <li><strong>Back-end:  </strong>Java, PHP, Python</li>
-                        <li><strong>Frameworks:  </strong>Spring Boot, Symfony</li>
-                        <li><strong>Mobile:  </strong>React Native</li>
+                        <li><i class="fas fa-laptop-code"></i> <strong>Front-End: </strong> HTML, CSS, JavaScript</li>
+                        <li><i class="fas fa-server"></i> <strong>Back-End: </strong> Java</li>
+                        <li><i class="fas fa-cogs"></i> <strong>Frameworks: </strong> Spring Boot, Symfony</li>
+                        <li><i class="fas fa-mobile-alt"></i> <strong>Mobile: </strong> React Native</li>
                     </ul>
                 </div>
     
                 <div class="competences-category">
                     <h3><i class="fas fa-database"></i> Bases de Données & Modélisation</h3>
                     <ul>
-                        <li><strong>Modélisation: </strong>Merise,UML</li>
-                        <li><strong>Langages:</strong> SQL (MySQL)</li>
+                        <li><i class="fas fa-project-diagram"></i> <strong>Modélisation: </strong> Merise, UML</li>
+                        <li><i class="fas fa-database"></i> <strong>Langages: </strong> SQL (MySQL)</li>
                     </ul>
                 </div>
     
                 <div class="competences-category">
                     <h3><i class="fas fa-search"></i> SEO & Performance</h3>
                     <ul>
-                        <li><strong>Optimisation SEO</strong></li>
-                        <li><strong>Optimisation des Performances Web</strong> </li>
-                        <li><strong>Amélioration de l'Expérience Utilisateur</strong></li>
+                        <li><i class="fas fa-chart-line"></i> <strong>Optimisation SEO</strong></li>
+                        <li><i class="fas fa-tachometer-alt"></i> <strong>Optimisation des Performances Web</strong></li>
+                        <li><i class="fas fa-user-check"></i> <strong>Amélioration de l'Expérience Utilisateur</strong></li>
                     </ul>
-                    
                 </div>
     
                 <div class="competences-category">
                     <h3><i class="fas fa-pencil-alt"></i> Design, CMS & Prototypage</h3>
                     <ul>
-                        <li><strong>Design: </strong>Figma (maquettage, prototypage)</li>
-                        <li><strong>CMS: </strong>WordPress, Prestashop</li>
+                        <li><i class="fas fa-drafting-compass"></i> <strong>Design: </strong> Figma (maquettage, prototypage)</li>
+                        <li><i class="fas fa-tools"></i> <strong>CMS: </strong> WordPress, Prestashop</li>
                     </ul>
                 </div>
             </div>
     
             <!-- Right Column -->
-
-            
             <div class="competences-column">
                 <div class="competences-category">
                     <h3><i class="fas fa-tools"></i> Outils, IDE, & CI/CD</h3>
                     <ul>
-                        <li><strong>IDE: </strong>VSCode, IntelliJ IDEA</li>
-                        <li><strong>Versioning & CI/CD: </strong>Git</li>
-                        <li><strong>Conteneurisation:</strong> Docker</li>
-                        <li><strong>API & Tests: </strong>Postman</li>
+                        <li><i class="fas fa-code"></i> <strong>IDE: </strong> VSCode, IntelliJ IDEA</li>
+                        <li><i class="fas fa-code-branch"></i> <strong>Versioning & CI/CD: </strong> Git</li>
+                        <li><i class="fas fa-docker"></i> <strong>Conteneurisation: </strong> Docker</li>
+                        <li><i class="fas fa-vial"></i> <strong>API & Tests: </strong> Postman</li>
                     </ul>
                 </div>
-                
+    
                 <div class="competences-category">
                     <h3><i class="fas fa-shield-alt"></i> Sécurité & Conformité</h3>
                     <ul>
-                        <li><strong>Sécurité :</strong> Certification ANSSI</li>
-                        <li><strong>Conformité :</strong> Certification RGPD</li>
+                        <li><i class="fas fa-lock"></i> <strong>Sécurité : </strong> Certification ANSSI</li>
+                        <li><i class="fas fa-file-alt"></i> <strong>Conformité : </strong> Certification RGPD</li>
                     </ul>
                 </div>
     
                 <div class="competences-category">
                     <h3><i class="fas fa-network-wired"></i> Réseaux & Systèmes</h3>
                     <ul>
-                        <li><strong>Réseaux :</strong> Notions en topologies réseau, protocoles</li>
-                        <li><strong>Systèmes :</strong> Linux (Alpine), administration de systèmes</li>
-                        <li><strong>Objets connectés :</strong> Arduino pour la programmation</li>
+                        <li><i class="fas fa-sitemap"></i> <strong>Réseaux : </strong> Notions en réseau, protocoles</li>
+                        <li><i class="fas fa-desktop"></i> <strong>Systèmes : </strong> Linux (Alpine), Windows</li>
+                        <li><i class="fas fa-microchip"></i> <strong>Objets connectés : </strong> Arduino </li>
                     </ul>
                 </div>
-    
-             
     
                 <div class="competences-category">
                     <h3><i class="fas fa-project-diagram"></i> Méthodologies de Travail</h3>
                     <ul>
-                        <li><strong>Agile :</strong> Cadre méthodologique</li>
-                        <li><strong>Scrum :</strong> Sous-ensemble d'Agile</li>
+                        <li><i class="fas fa-lightbulb"></i> <strong>Agile : </strong> Cadre méthodologique</li>
+                        <li><i class="fas fa-tasks"></i> <strong>Scrum : </strong> Sous-ensemble d'Agile</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
+    
     
 
     <section id="experiences" class="experiences-section">
@@ -230,12 +230,7 @@ Développeur full-stack spécialisé en Spring Boot et Angular, je suis passionn
                     <p>Développement d'une application de quizz utilisant Spring Boot, avec une interface JSP et MySQL pour la gestion des scores et des utilisateurs. L'application permet aux utilisateurs de répondre à des questions tout en enregistrant leurs performances.</p>
                     <a href="#" class="project-link btn" data-title="Quizz avec Spring" data-description="Application de quizz avec Spring Boot, REST, JSP, et MySQL pour la gestion des utilisateurs et des scores.">Voir plus</a>
                 </div>
-                <div class="card">
-                    <h3><i class="fas fa-network-wired"></i> Hache_TTP</h3>
-                    <h4>client HTTP</h4>
-                    <p>Création d'un client HTTP développé en J2EE, permettant de faire des requêtes REST à des API externes. L'interface est réalisée avec JSP pour afficher les résultats des requêtes en temps réel.</p>
-                    <a href="#" class="project-link btn" data-title="Client HTTP avec J2EE" data-description="Client HTTP développé en J2EE, utilisant REST et JSP pour l'affichage des résultats des requêtes.">Voir plus</a>
-                </div>
+                
             </div>
         </section>
         
@@ -338,7 +333,7 @@ Développeur full-stack spécialisé en Spring Boot et Angular, je suis passionn
     
 
     <footer class="main-footer">
-        <small>© 2024 TekalchemyX by Abdelkarim REZGUI</small>
+        
         
         <div class="social-icons">
             <a href="https://www.linkedin.com/in/abdelkarimrezgui" target="_blank" class="social-link">
@@ -357,6 +352,8 @@ Développeur full-stack spécialisé en Spring Boot et Angular, je suis passionn
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
+
+        <small>© 2024 TekalchemyX by Abdelkarim REZGUI</small>
     </footer>
     
    

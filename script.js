@@ -1,74 +1,53 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
     // Modal Creation
-    const projectLinks = document.querySelectorAll(".project-link");
     const modal = document.createElement("div");
     modal.classList.add("modal");
-
-    // Modal structure
     modal.innerHTML = `
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2 id="modal-title"></h2>
             <p id="modal-description"></p>
-        </div>
-    `;
+        </div>`;
     document.body.appendChild(modal);
 
     const modalTitle = document.getElementById("modal-title");
     const modalDescription = document.getElementById("modal-description");
     const closeModalButton = modal.querySelector(".close");
 
-    // Open modal when project link is clicked
-    projectLinks.forEach(link => {
-        link.addEventListener("click", function (e) {
+    // Modal Logic
+    document.querySelectorAll(".project-link").forEach(link => {
+        link.addEventListener("click", e => {
             e.preventDefault();
-
-            const projectTitle = link.getAttribute("data-title");
-            const projectDescription = link.getAttribute("data-description");
-
-            modalTitle.textContent = projectTitle;
-            modalDescription.textContent = projectDescription;
-
+            modalTitle.textContent = link.getAttribute("data-title");
+            modalDescription.textContent = link.getAttribute("data-description");
             modal.style.display = "flex";
         });
     });
 
-    // Close modal
-    closeModalButton.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
-
-    window.addEventListener("click", function (e) {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-    });
+    closeModalButton.addEventListener("click", () => modal.style.display = "none");
+    window.addEventListener("click", e => e.target === modal ? modal.style.display = "none" : null);
 
     // Burger Menu Logic
     const menuToggle = document.getElementById("mobile-menu");
     const navLinks = document.getElementById("nav-links");
-    const navItems = document.querySelectorAll(".nav-links a");
 
-    menuToggle.addEventListener("click", function () {
+    menuToggle.addEventListener("click", () => {
         navLinks.classList.toggle("show");
-        // Ensure scrolling is enabled when the menu is open
         document.body.style.overflowY = navLinks.classList.contains("show") ? "hidden" : "auto";
     });
 
-    // Close menu after clicking a link
-    navItems.forEach(link => {
-        link.addEventListener("click", function () {
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
             navLinks.classList.remove("show");
-            document.body.style.overflowY = "auto"; // Re-enable scrolling
+            document.body.style.overflowY = "auto";
         });
     });
 
-    // Close mobile menu when clicking outside
-    window.addEventListener("click", function (e) {
+    window.addEventListener("click", e => {
         if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
             navLinks.classList.remove("show");
-            document.body.style.overflowY = "auto"; // Re-enable scrolling
+            document.body.style.overflowY = "auto";
         }
     });
 
@@ -77,25 +56,29 @@ document.addEventListener("DOMContentLoaded", function () {
     particlesContainer.classList.add('particles');
     document.querySelector('.hero').appendChild(particlesContainer);
 
-    for (let i = 0; i < 50; i++) {
+    Array.from({ length: 50 }).forEach(() => {
         const particle = document.createElement('div');
         particle.classList.add('particle');
         particle.style.left = `${Math.random() * 100}vw`;
-        particle.style.animationDuration = `${(Math.random() * 5) + 5}s`;
+        particle.style.animationDuration = `${Math.random() * 5 + 5}s`;
         particle.style.animationDelay = `${Math.random() * 3}s`;
         particlesContainer.appendChild(particle);
-    }
+    });
 
     // Scroll to Section on CTA Button Click
     const ctaButton = document.querySelector('.cta-button');
     if (ctaButton) {
-        ctaButton.addEventListener('click', function () {
+        ctaButton.addEventListener('click', () => {
             document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
         });
     }
 
-    // Ensure content is interactive after hero animation
-    const heroContent = document.querySelector('.hero-content');
-    heroContent.style.pointerEvents = 'auto'; // Re-enable interaction after animation
-
+    // Scroll Fade-In Effect
+    document.addEventListener("scroll", () => {
+        document.querySelectorAll("section").forEach(section => {
+            if (section.getBoundingClientRect().top < window.innerHeight * 0.75) {
+                section.classList.add("visible");
+            }
+        });
+    });
 });
