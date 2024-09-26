@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     // Modal Creation
     const modal = document.createElement("div");
     modal.classList.add("modal");
@@ -51,12 +50,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Particle Animation Logic
+    // Particle Animation Logic - reduce particles for mobile
     const particlesContainer = document.createElement('div');
     particlesContainer.classList.add('particles');
     document.querySelector('.hero').appendChild(particlesContainer);
 
-    Array.from({ length: 50 }).forEach(() => {
+    const particleCount = window.innerWidth < 768 ? 30 : 50; // Fewer particles on mobile
+
+    Array.from({ length: particleCount }).forEach(() => {
         const particle = document.createElement('div');
         particle.classList.add('particle');
         particle.style.left = `${Math.random() * 100}vw`;
@@ -73,12 +74,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Scroll Fade-In Effect
+    // Scroll Fade-In Effect (Throttle for performance on mobile)
+    let lastScroll = 0;
     document.addEventListener("scroll", () => {
-        document.querySelectorAll("section").forEach(section => {
-            if (section.getBoundingClientRect().top < window.innerHeight * 0.75) {
-                section.classList.add("visible");
-            }
-        });
+        const currentScroll = window.pageYOffset;
+        if (Math.abs(currentScroll - lastScroll) > 50) { // Throttle the event
+            document.querySelectorAll("section").forEach(section => {
+                if (section.getBoundingClientRect().top < window.innerHeight * 0.75) {
+                    section.classList.add("visible");
+                }
+            });
+            lastScroll = currentScroll;
+        }
     });
 });
